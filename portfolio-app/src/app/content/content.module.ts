@@ -3,16 +3,20 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 // Angular Material Libraries
-import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSidenavModule, MatTabsModule, MatCardModule} from '@angular/material';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
-     DashboardComponent
+     DashboardComponent,
+     HomePageComponent
     ],
   imports: [
     CommonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTabsModule,
+    MatCardModule
     
   ],
   exports:

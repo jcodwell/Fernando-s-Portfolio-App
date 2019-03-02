@@ -10,8 +10,8 @@ import { ContentModule } from './content/content.module';
 
 //Angular Materials Imports
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule, MatIconModule, MatButtonModule} from '@angular/material';
+
 
 import 'hammerjs';
 
@@ -29,7 +29,8 @@ import 'hammerjs';
     BrowserAnimationsModule,
     ContentModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
