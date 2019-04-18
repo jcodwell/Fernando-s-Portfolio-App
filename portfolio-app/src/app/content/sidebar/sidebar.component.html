@@ -1,4 +1,41 @@
 <mat-drawer-container class="main-container">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-  <mat-drawer-content ><app-dashboard></app-dashboard></mat-drawer-content>
+
+  <mat-drawer #drawer mode="side" >
+    <p>Meet The Artists.</p>
+  <!--Display For Buttons-->
+  <div>
+
+    <button  
+      style=" display: block;
+      margin-bottom: 20px;
+      padding-left: 37px;
+      padding-right: 42px;"
+      (click) = "displayProfile('Jada')"
+    mat-raised-button>  
+      Jada Codwell
+  </button>
+
+  <button 
+      (click) = "displayProfile('Fernando')"
+  mat-raised-button>
+      Fernando Giannazzo
+  </button>
+  </div> 
+  </mat-drawer>
+  <mat-drawer-content >
+      <button type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+      </button>
+    <!--Toggle Artist Dashboard-->
+    <div *ngIf = "this.name == 'Fernando' ">
+    <app-dashboard></app-dashboard>
+   </div>
+   <div *ngIf = "this.name == 'Jada' ">
+      <app-jada-dashboard></app-jada-dashboard>
+   </div>
+   <div *ngIf = "this.name == '' ">
+      <app-home-page></app-home-page>
+   </div>
+
+  </mat-drawer-content>
 </mat-drawer-container>

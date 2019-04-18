@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  name: string = '';
 
-  constructor() { }
+  
+  constructor() {
+    
+   }
 
   ngOnInit() {
+   
   }
+
+displayProfile(name){
+   this.name = name;
+   console.log(this.name +' '+ "profile is being displayed.");
+}
 
 }
