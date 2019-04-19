@@ -17,7 +17,8 @@ import {MatToolbarModule, MatIconModule, MatButtonModule} from '@angular/materia
 
 import 'hammerjs';
 import { EsComponentComponent } from './es-component/es-component.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -28,7 +29,8 @@ import { AdminComponent } from './admin/admin.component';
     HeaderComponent,
     FooterComponent,
     EsComponentComponent,
-    AdminComponent,
+    AdminComponent
+    
     
   ],
   imports: [
@@ -39,7 +41,8 @@ import { AdminComponent } from './admin/admin.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

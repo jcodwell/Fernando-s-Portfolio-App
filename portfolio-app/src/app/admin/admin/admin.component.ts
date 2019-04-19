@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ElasticsearchService } from '../elasticsearch.service';
+import { ElasticsearchService } from '../../elasticsearch.service';
+import { Customer } from '../customer.interface';
 
 @Component({
   selector: 'app-admin',
@@ -8,6 +9,8 @@ import { ElasticsearchService } from '../elasticsearch.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+
+
   isConnected = false;
 
   form: FormGroup;
@@ -64,3 +67,4 @@ onSubmit(value){
   });
  }
 }
+

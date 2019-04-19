@@ -15,7 +15,7 @@
               <input type="number" class="form-control" id="id" formControlName="id">
               <br/>
               <label class="control-label" for="fullname">Full Name</label>
-              <input type="text" class="form-control" id="fullname" formControlName="fullname">
+              <input type="text" class="form-control" id="fullname" formControlName="name">
               <br/>
               <label class="control-label" for="age">Age</label>
               <input type="number" class="form-control" id="age" formControlName="age">
@@ -27,3 +27,9 @@
           <button type="submit" [disabled]="!isConnected" class="btn btn-primary pull-right">Submit</button>
         </form>
       </div>
+      
+      <nav>
+          <a routerLink="customers" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>
+         
+          <router-outlet></router-outlet>
+     </nav>    

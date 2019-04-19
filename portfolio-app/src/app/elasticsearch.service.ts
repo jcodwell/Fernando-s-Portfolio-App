@@ -8,7 +8,11 @@ import * as elasticsearch from 'elasticsearch-browser';
 export class ElasticsearchService {
 
   private client: Client;
- 
+  private queryalldocs ={
+    'query': {
+      'match_all': {}
+    }
+  };
   constructor() {
     if (!this.client) {
       this._connect();
@@ -40,4 +44,13 @@ export class ElasticsearchService {
   addToIndex(value):any{
     return this.client.create(value);
   } 
+  
+  getAllDocuments(_Index, _type):any {
+    return this.client.search({
+      index: _Index,
+      type: _type,
+      body: this.queryalldocs,
+      filterPath:['hits.hits._source']
+    });
+  }
 }
