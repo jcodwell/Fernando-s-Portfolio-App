@@ -36,4 +36,8 @@ export class ElasticsearchService {
       body: 'hello grokonez!'
     });
   }
+  // Add/Create the Customer Index/Data
+  addToIndex(value):any{
+    return this.client.create(value);
+  } 
 }

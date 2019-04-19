@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 //Main Module
 import { ContentModule } from './content/content.module';
@@ -15,6 +17,7 @@ import {MatToolbarModule, MatIconModule, MatButtonModule} from '@angular/materia
 
 import 'hammerjs';
 import { EsComponentComponent } from './es-component/es-component.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -25,6 +28,7 @@ import { EsComponentComponent } from './es-component/es-component.component';
     HeaderComponent,
     FooterComponent,
     EsComponentComponent,
+    AdminComponent,
     
   ],
   imports: [
@@ -34,7 +38,8 @@ import { EsComponentComponent } from './es-component/es-component.component';
     ContentModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
