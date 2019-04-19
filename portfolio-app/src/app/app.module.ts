@@ -14,6 +14,7 @@ import {MatToolbarModule, MatIconModule, MatButtonModule} from '@angular/materia
 
 
 import 'hammerjs';
+import { EsComponentComponent } from './es-component/es-component.component';
 
 
 
@@ -23,6 +24,7 @@ import 'hammerjs';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    EsComponentComponent,
     
   ],
   imports: [
