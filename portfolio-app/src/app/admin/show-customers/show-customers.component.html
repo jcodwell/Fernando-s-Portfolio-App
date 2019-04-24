@@ -1,3 +1,5 @@
 <div *ngFor="let customerSource of customerSources" style="margin-top:20px">
     <customer-details [customer]='customerSource._source'></customer-details>
+    <button  type="button"  onclick="onDelete()">Delete</button>
+    <button>View Customer Info</button>
   </div>

@@ -26,6 +26,11 @@ export class ShowCustomersComponent implements OnInit {
       }).then(() => {
         console.log('Show Customer Completed!');
       });
+     
+  }
+
+  onDelete() {
+    console.log("Clicked");
   }
  
 }

@@ -45,6 +45,10 @@ export class ElasticsearchService {
     return this.client.create(value);
   } 
   
+  removeFromIndex(value):any{
+    value = null;
+    
+  }
   getAllDocuments(_Index, _type):any {
     return this.client.search({
       index: _Index,
